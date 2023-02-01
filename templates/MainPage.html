@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<title>Plan Your Week</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body style="background-color: beige;">
+    <div style=" width: 80%; margin: auto; height: 50px; background-color: grey;">
+        <p style=" color:black; font-weight:bold; padding-top: 15px; font-size: 25px; text-align: center;">To-Do Planing</p>
+    </div>
+    <div style=" margin-top: 30px; width: 50%; float: left; height: 1100px; background-color: beige;">
+        <p style=" color:black; font-size: 25px; font-weight:bold; text-align: center;">Developer 1</p>
+        <table style="width: 100%" >
+            <tr>
+                {% for header in headings %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in Dev1week %}
+            <tr>
+            {% for cell in row %}
+            <td style="text-align:center;">{{cell}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div style=" margin-top: 30px; width: 50%; float: right; height: 1100px; background-color: beige;">
+        <p style=" color:black; font-size: 25px; font-weight:bold; text-align: center;">Developer 2</p>
+        <table  id='Dev2table' style="width: 100%">
+
+            <tr>
+                {% for header in headings %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in Dev2week %}
+            <tr>
+            {% for cell in row %}
+            <td style="text-align:center;">{{cell}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div style="width: 50%; float:left; height: 1000px; background-color: beige;">
+        <p style=" color:black; font-size: 25px; font-weight:bold; text-align: center;">Developer 3</p>
+        <table style="width: 100%">
+
+            <tr>
+                {% for header in headings %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in Dev3week %}
+            <tr>
+            {% for cell in row %}
+            <td style="text-align:center;">{{cell}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div style="width: 50%; height: 1000px; float:right;  background-color: beige;">
+        <p style=" color:black; font-size: 25px; font-weight:bold; text-align: center;">Developer 4</p>
+        <table  id='Dev4table'style="width: 100%">
+
+            <tr>
+                {% for header in headings %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in Dev4week %}
+            <tr>
+            {% for cell in row %}
+            <td style="text-align:center;">{{cell}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div style="width: 50%; height: 1000px; float:left; background-color: beige;">
+        <p style=" color:black; font-size: 25px; font-weight:bold; text-align: center;">Developer 5</p>
+        <table  id='Dev5table'style="width: 100%" >
+
+            <tr>
+
+                {% for header in headings %}
+                <th >{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in Dev5week %}
+            <tr>
+            {% for cell in row %}
+            <td style="text-align:center;">{{cell}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>
