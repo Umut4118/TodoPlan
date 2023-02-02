@@ -1,9 +1,11 @@
 import requests
 import mysql.connector
+# Mock dosyalarından yanıtları almak için kullanılan kısım
 response1 = requests.get('http://www.mocky.io/v2/5d47f24c330000623fa3ebfa')
 response2 = requests.get('http://www.mocky.io/v2/5d47f235330000623fa3ebf7')
 list1 = response1.json()
 list2 = response2.json()
+# Mock yanıtlarını rahat kullanabilmek için liste haline çeviriliyor
 newlist = []
 for i in list1:
     if "zorluk" in i:
@@ -42,6 +44,8 @@ for i in list2:
     }
     temp = temp + 1
     newlist.append(dict2)
+
+# DB bağlantısı ile listler local bir DB'e  atılıyor
 localdb= mysql.connector.connect(
     host='localhost',
     user='root',
